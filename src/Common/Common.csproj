@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3D91CED-553F-4433-AD67-8706E0127D8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreeSCADA.Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/Common/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\SharpZipLib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\IronPython\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules">
+      <HintPath>..\Archiver\3rdParty\IronPython\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.Converters, Version=1.1.0.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\DataConverters\Kent.Boogaart.Converters.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.HelperTrinity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\DataConverters\Kent.Boogaart.HelperTrinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=0.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\IronPython\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Core, Version=0.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\IronPython\Microsoft.Scripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Archiver\3rdParty\wpftoolkit\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseChannel.cs" />
+    <Compile Include="BaseCommand.cs" />
+    <Compile Include="BaseCommandContext.cs" />
+    <Compile Include="BaseDropDownCommand.cs" />
+    <Compile Include="ChannelMember.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="CommunationPlugs.cs" />
+    <Compile Include="ConfigurationManager.cs" />
+    <Compile Include="FScada.Common.Dialog\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FScada.Common.Dialog\TagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ChannelsChangedHandler.cs" />
+    <Compile Include="Interfaces\IChannelsScriptHandlers.cs" />
+    <Compile Include="Interfaces\ICommunationPlugsManager.cs" />
+    <Compile Include="Interfaces\IExtend.cs" />
+    <Compile Include="Interfaces\IExtendsManager.cs" />
+    <Compile Include="Interfaces\IScriptsManager.cs" />
+    <Compile Include="Interfaces\Member_AlarmState.cs" />
+    <Compile Include="Interfaces\Member_boolValue.cs" />
+    <Compile Include="Interfaces\Member_DeadZone.cs" />
+    <Compile Include="Interfaces\Member_Description.cs" />
+    <Compile Include="Interfaces\Member_doubleValue.cs" />
+    <Compile Include="Interfaces\Member_floatValue.cs" />
+    <Compile Include="Interfaces\Member_FullId.cs" />
+    <Compile Include="Interfaces\Member_int32Value.cs" />
+    <Compile Include="Interfaces\Member_IsReadOnly.cs" />
+    <Compile Include="Interfaces\Member_ModifyTime.cs" />
+    <Compile Include="Interfaces\Member_Name.cs" />
+    <Compile Include="Interfaces\Member_PluginId.cs" />
+    <Compile Include="Interfaces\Member_RangeMax.cs" />
+    <Compile Include="Interfaces\Member_RangeMin.cs" />
+    <Compile Include="Interfaces\Member_Status.cs" />
+    <Compile Include="Interfaces\Member_StatusFlags.cs" />
+    <Compile Include="Interfaces\Member_Type.cs" />
+    <Compile Include="Interfaces\Member_Unit.cs" />
+    <Compile Include="Interfaces\NewScriptCreatedHandler.cs" />
+    <Compile Include="Scripting\ScriptHost.cs" />
+    <Compile Include="Interfaces\IScriptHost.cs" />
+    <Compile Include="MemberOfChannel.cs" />
+    <Compile Include="Interfaces\Member_Value.cs" />
+    <Compile Include="MethodDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MethodDialog.designer.cs">
+      <DependentUpon>MethodDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectEntityType.cs" />
+    <Compile Include="ProjectInfo.cs" />
+    <Compile Include="Schema\BrushProvider.cs" />
+    <Compile Include="Schema\ColorRangeValue.cs" />
+    <Compile Include="Schema\Converters\BooleanConverter.cs" />
+    <Compile Include="Schema\Converters\VisibilityConverter.cs" />
+    <Compile Include="Schema\Converters\ScriptConvert.cs" />
+    <Compile Include="Schema\Converters\ExpressionScriptConverter.cs" />
+    <Compile Include="Schema\Converters\MultiStringConverter.cs" />
+    <Compile Include="Schema\myHelpScrollViewer.cs" />
+    <Compile Include="Schema\Converters\RangeSolidBrushConverter.cs" />
+    <Compile Include="Schema\SolidBrush.cs" />
+    <Compile Include="Schema\TextRangeValue.cs" />
+    <Compile Include="Schema\TimeChartControl.cs" />
+    <Compile Include="Scripting\Application.cs" />
+    <Compile Include="Scripting\ChannelsScriptHandlers.cs" />
+    <Compile Include="Scripting\EventScriptCollection.cs" />
+    <Compile Include="Scripting\FScadaApplication.cs" />
+    <Compile Include="Scripting\GenericEventHandler.cs" />
+    <Compile Include="Interfaces\IVisualControlDescriptor.cs" />
+    <Compile Include="Interfaces\IVisualControlsPlug.cs" />
+    <Compile Include="Scripting\SchemaEventProxy.cs" />
+    <Compile Include="Scripting\ScriptCallInfo.cs" />
+    <Compile Include="SoundInfo.cs" />
+    <Compile Include="StringToValue.cs" />
+    <Compile Include="VisualControlsPlugs.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Env.cs" />
+    <Compile Include="Interfaces\IChannel.cs" />
+    <Compile Include="Interfaces\ICommandContext.cs" />
+    <Compile Include="Interfaces\ICommandItems.cs" />
+    <Compile Include="Interfaces\ICommands.cs" />
+    <Compile Include="Interfaces\ICommunicationPlug.cs" />
+    <Compile Include="Interfaces\IEnvironment.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MRUManager.cs" />
+    <Compile Include="NullCommand.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Schema\Actions\BaseAction.cs" />
+    <Compile Include="Schema\Actions\ActionsCollection.cs" />
+    <Compile Include="Schema\Actions\MoveAction.cs" />
+    <Compile Include="Schema\Actions\ValueAction.cs" />
+    <Compile Include="Schema\Actions\RotateAction.cs" />
+    <Compile Include="Schema\Actions\ShowAction.cs" />
+    <Compile Include="Schema\AnimatedImage.cs" />
+    <Compile Include="Schema\ChannelDataProvider.cs" />
+    <Compile Include="Schema\ChannelDataSource.cs" />
+    <Compile Include="Schema\Converters\SolidBrushConverter.cs" />
+    <Compile Include="Schema\Converters\ComposingConverter.cs" />
+    <Compile Include="Schema\MediaProvider.cs" />
+    <Compile Include="Schema\Converters\RangeConverter.cs" />
+    <Compile Include="Schema\SchemaDocument.cs" />
+    <Compile Include="Schema\Commands\SchemaCommands.cs" />
+    <Compile Include="Schema\WPFShemaContainer.cs" />
+    <Compile Include="Scripting\Script.cs" />
+    <Compile Include="Scripting\ScriptManager.cs" />
+    <Compile Include="StringResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MethodDialog.resx">
+      <DependentUpon>MethodDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FreeSCADA.Designer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppStart" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hongzhi_test.fs2</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

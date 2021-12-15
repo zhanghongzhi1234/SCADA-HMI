@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93466C99-5637-4243-A01A-7AF12F706889}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreeSCADA.Designer</RootNamespace>
+    <AssemblyName>Designer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/Designer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Debug\Designer.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\Release\Designer.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevAge.Core">
+      <HintPath>..\Archiver\3rdParty\SourceGrid4_11\DevAge.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevAge.Windows.Forms">
+      <HintPath>..\Archiver\3rdParty\SourceGrid4_11\DevAge.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit">
+      <HintPath>..\Archiver\3rdParty\SharpZipLib\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.Converters, Version=1.1.0.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdParty\DataConverters\Kent.Boogaart.Converters.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Puzzle.SyntaxBox.NET3.5">
+      <HintPath>..\Archiver\3rdParty\SyntaxBox\Puzzle.SyntaxBox.NET3.5.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceGrid">
+      <HintPath>..\Archiver\3rdParty\SourceGrid4_11\SourceGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ToolBox">
+      <HintPath>..\Archiver\3rdParty\toolbox\ToolBox.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\Archiver\3rdParty\DockPanel\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCompletionDatas.cs" />
+    <Compile Include="BraceFoldingStrategy.cs" />
+    <Compile Include="CommandManager.cs" />
+    <Compile Include="DialogMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DialogMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProjectInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ProjectInfoDialog.Designer.cs">
+      <DependentUpon>ProjectInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProjectMediaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ProjectMediaDialog.Designer.cs">
+      <DependentUpon>ProjectMediaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ReferanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ReferanceForm.Designer.cs">
+      <DependentUpon>ReferanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RenameSchemaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RenameSchemaForm.Designer.cs">
+      <DependentUpon>RenameSchemaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UserDLLDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UserDLLDialog.Designer.cs">
+      <DependentUpon>UserDLLDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpCommands.cs" />
+    <Compile Include="MyCompletionData.cs" />
+    <Compile Include="SchemaEditor\BindingSerializing.cs" />
+    <Compile Include="SchemaEditor\EditorHelpers.cs" />
+    <Compile Include="SchemaEditor\GridManager.cs" />
+    <Compile Include="SchemaEditor\Manipulators\ActionsEditManipulator.cs" />
+    <Compile Include="SchemaEditor\Manipulators\BaseManipulator.cs" />
+    <Compile Include="SchemaEditor\Manipulators\Controlls\PointDragThumb.cs" />
+    <Compile Include="SchemaEditor\Manipulators\PolylineEditManipulantor.cs" />
+    <Compile Include="SchemaEditor\Manipulators\TextBoxManipulator.cs" />
+    <Compile Include="SchemaEditor\Manipulators\Controlls\DragThumb.cs" />
+    <Compile Include="SchemaEditor\Manipulators\Controlls\ResizeThumb.cs" />
+    <Compile Include="SchemaEditor\Manipulators\Controlls\RotateThumb.cs" />
+    <Compile Include="SchemaEditor\Manipulators\DragResizeRotateManipulator.cs" />
+    <Compile Include="SchemaEditor\Manipulators\GeometryHilightManipulator.cs" />
+    <Compile Include="SchemaEditor\ObjectsFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\BaseBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\BaseBindingPanel.Designer.cs">
+      <DependentUpon>BaseBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\BooleanBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\BooleanBindingPanel.Designer.cs">
+      <DependentUpon>BooleanBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\BooleanBindingPanelFactory.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\CommonBindingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\CommonBindingDialog.designer.cs">
+      <DependentUpon>CommonBindingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\MultiTextBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\MultiTextBindingPanel.Designer.cs">
+      <DependentUpon>MultiTextBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\MultiTextBindingPanelFactory.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\MultiTextListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\NumExpressionBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\NumExpressionBindingPanel.designer.cs">
+      <DependentUpon>NumExpressionBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\ContentEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\ContentEditorDialog.Designer.cs">
+      <DependentUpon>ContentEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\RangeBrushBindingPanelFactory.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\RangeListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\RangeSolidBrushBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\RangeSolidBrushBindingPanel.Designer.cs">
+      <DependentUpon>RangeSolidBrushBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\ScriptExpressionBindingFactory.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\SharpCodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\SharpCodeDialog.Designer.cs">
+      <DependentUpon>SharpCodeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\SolidBrushBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\SolidBrushBindingPanel.Designer.cs">
+      <DependentUpon>SolidBrushBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\NumericBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\NumericBindingPanel.Designer.cs">
+      <DependentUpon>NumericBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\ChannelSelectEditor.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\ColorEditor.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\ImageEditor.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\StyleEditor.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertyWrapper.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\PropProxy.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\PropertiesMap.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\StringBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\StringBindingPanel.Designer.cs">
+      <DependentUpon>StringBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\TypeConverters\DependencyObjectConverter.cs" />
+    <Compile Include="SchemaEditor\SchemaCommands.cs">
+    </Compile>
+    <Compile Include="SchemaEditor\SchemaMenuContext.cs" />
+    <Compile Include="SchemaEditor\PropertiesUtils\ScriptExpressionBindingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchemaEditor\PropertiesUtils\ScriptExpressionBindingPanel.Designer.cs">
+      <DependentUpon>ScriptExpressionBindingPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEditor\SelectionManager.cs" />
+    <Compile Include="SchemaEditor\StylesLibrary.cs" />
+    <Compile Include="SchemaEditor\ToolDescriptor.cs" />
+    <Compile Include="SchemaEditor\Tools\ActionEditTool.cs" />
+    <Compile Include="SchemaEditor\Tools\BaseTool.cs" />
+    <Compile Include="SchemaEditor\Tools\ControlCreateTool.cs" />
+    <Compile Include="SchemaEditor\Tools\DrawTool.cs" />
+    <Compile Include="SchemaEditor\Tools\EllipseTool.cs" />
+    <Compile Include="SchemaEditor\Tools\PolylineTool.cs" />
+    <Compile Include="SchemaEditor\Tools\RectangleTool.cs" />
+    <Compile Include="SchemaEditor\Tools\SelectionTool.cs" />
+    <Compile Include="SchemaEditor\Tools\TextBoxTool.cs" />
+    <Compile Include="SchemaEditor\Tools\HelperSelectorTool.cs" />
+    <Compile Include="SchemaEditor\UndoRedo.cs" />
+    <Compile Include="StringResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArchiverSettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EventsTab.cs" />
+    <Compile Include="Views\EventWrapper.cs" />
+    <Compile Include="Views\NodeRename.cs" />
+    <Compile Include="Views\ProjectNodes.cs" />
+    <Compile Include="Views\ScriptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DocumentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\EventsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Views\ProjectContentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialogs\ProjectInfoDialog.resx">
+      <DependentUpon>ProjectInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ProjectMediaDialog.resx">
+      <DependentUpon>ProjectMediaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReferanceForm.resx">
+      <DependentUpon>ReferanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RenameSchemaForm.resx">
+      <DependentUpon>RenameSchemaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SaveDocumentsDialog.resx">
+      <DependentUpon>SaveDocumentsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DialogMessages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UserDLLDialog.resx">
+      <DependentUpon>UserDLLDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\VariablesDialog.resx">
+      <DependentUpon>VariablesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.zh-CHS.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\CommonBindingDialog.resx">
+      <DependentUpon>CommonBindingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\MultiTextBindingPanel.resx">
+      <DependentUpon>MultiTextBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\NumExpressionBindingPanel.resx">
+      <DependentUpon>NumExpressionBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\PropertyGridTypeEditors\ContentEditorDialog.resx">
+      <DependentUpon>ContentEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\RangeSolidBrushBindingPanel.resx">
+      <DependentUpon>RangeSolidBrushBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\SharpCodeDialog.resx">
+      <DependentUpon>SharpCodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\SolidBrushBindingPanel.resx">
+      <DependentUpon>SolidBrushBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\NumericBindingPanel.resx">
+      <DependentUpon>NumericBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\StringBindingPanel.resx">
+      <DependentUpon>StringBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchemaEditor\PropertiesUtils\ScriptExpressionBindingPanel.resx">
+      <DependentUpon>ScriptExpressionBindingPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ArchiverSettingsView.resx">
+      <DependentUpon>ArchiverSettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ScriptView.resx">
+      <DependentUpon>ScriptView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProjectContentView.resx">
+      <DependentUpon>ProjectContentView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SharpCodeView.resx">
+      <DependentUpon>SharpCodeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VariablesView.resx">
+      <DependentUpon>VariablesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Views\PropertyBrowserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SaveDocumentsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SaveDocumentsDialog.Designer.cs">
+      <DependentUpon>SaveDocumentsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SchemaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SharpCodeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ToolBoxView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ToolWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\VariablesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\VariablesDialog.Designer.cs">
+      <DependentUpon>VariablesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VariablesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Archiver\Archiver.csproj">
+      <Project>{0BD3A946-E95E-46B7-A0B2-F89C2B03A5F9}</Project>
+      <Name>Archiver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{A3D91CED-553F-4433-AD67-8706E0127D8D}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RunTime\RunTime.csproj">
+      <Project>{047EED80-A3C6-4A7F-BB4C-E4A64F96B210}</Project>
+      <Name>RunTime</Name>
+    </ProjectReference>
+    <Page Include="SchemaEditor\Manipulators\Controlls\styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\arrow_undo.png" />
+    <None Include="Resources\arrow_redo.png" />
+    <None Include="Resources\checkmark.png" />
+    <Content Include="Resources\cog_edit.png" />
+    <None Include="Resources\csharp.ico" />
+    <Content Include="Resources\cursor.png" />
+    <None Include="Resources\db_settings.png" />
+    <None Include="Resources\IronPython.syn" />
+    <None Include="Resources\log_error.png" />
+    <None Include="Resources\log_warning.png" />
+    <None Include="Resources\delete.png" />
+    <Content Include="Resources\move_object_back.png" />
+    <Content Include="Resources\move_object_front.png" />
+    <Content Include="Resources\new_file.png" />
+    <Content Include="Resources\open_events.png" />
+    <Content Include="Resources\open_file.png" />
+    <Content Include="Resources\open_schema.png" />
+    <None Include="Resources\run.png" />
+    <None Include="Resources\page_copy.png" />
+    <None Include="Resources\paste_plain.png" />
+    <None Include="Resources\page_add.png" />
+    <None Include="Resources\page_white_add.png" />
+    <None Include="Resources\page_white_code_red.png" />
+    <Content Include="Resources\save_file.png" />
+    <None Include="Resources\table_add.png" />
+    <None Include="Resources\script.png" />
+    <None Include="Resources\script_add.png" />
+    <None Include="Resources\script_remove.png" />
+    <Content Include="Resources\shape_ellipse_add.png" />
+    <Content Include="Resources\shape_group.png" />
+    <Content Include="Resources\shape_line_add.png" />
+    <Content Include="Resources\shape_square_add.png" />
+    <Content Include="Resources\shape_ungroup.png" />
+    <None Include="Resources\splash.jpg" />
+    <Content Include="Resources\textfield_add.png" />
+    <None Include="Resources\tree_archiver.png" />
+    <None Include="Resources\tree_channels.png" />
+    <None Include="Resources\tree_plugin.png" />
+    <None Include="Resources\tree_project.png" />
+    <None Include="Resources\tree_rule.png" />
+    <None Include="Resources\tree_schema.png" />
+    <None Include="Resources\tree_schemas.png" />
+    <None Include="Resources\tree_scripts.png" />
+    <None Include="Resources\tree_variable.png" />
+    <None Include="Resources\tree_script.png" />
+    <Content Include="Resources\zoom_in.png" />
+    <None Include="Resources\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

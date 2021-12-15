@@ -159,19 +159,29 @@ Key can)
 
 ### DataSource Import
 The HMI will automatically find the plugin dll and show it in "Diver" menu group, below is opc dirver setting:  
+
 ![](./docs/images/OPc%20driver.png)
+
 Operator can import Opc datasource, Add/Remove datapoints here.
 ### Data Binding
 Data Binding can provide Graphic animation configuration. Right-click on the graphic object in the graphic configuration window, click "Binding Data Wizard" (or double-click the graphic object)  
+
 ![](./docs/images/binding_menu.png)
+
 Open the animation binding window.  
+
 ![](./docs/images/binding.png)
+
 This Dialog will map attribute of selected object to the datasource by the rule, operator can create rules here, usually include direct mapping, threshold mapping or simple scripts.
 # Designer Architecture
+
 ![](./docs/images/Window%20management.png)
+
 # Complex Schematic
 We use it to draw many complex schematics graphs, below is the power station house graph created by this HMI:
+
 ![](./docs/images/PowerStation.png)
+
 # Performance
 Performance is very important indicator for HMI, as the test result we conducted, this HMI can support up to 20000 datapoints refresh mapping at the same time for single schematic page. This is enough, and in real environment, it is not proper to draw so much datapoint at single page, split to multiple pages better, which can balance the load.
 

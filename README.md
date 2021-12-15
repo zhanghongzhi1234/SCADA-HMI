@@ -1,9 +1,9 @@
 # SCADA-HMI
 This software is a SCADA(Supervisory Control and Data Acquisition) HMI(Human Mmachine Interface), its purpose is to replace GraphWorX in our project, becuase Iconics software is not free. The new HMI software can create industrial monitor and control interface for millions of devices. It support several commonly used industrial protocols, such as Modbus, OPC, and can be extended seamless in future.  
 
-Below is a sample of schematic graph drawed by HMI, This graph provide real-time monitoring of all power line and power device:  
+Below is a sample of schematic graph drawed by HMI, This graph provide real-time monitoring of all station fans:  
 
-![](./docs/images/400V.png)
+![](./docs/images/occ_fan.png)
 
 ## Advantage
 This HMI has powerful functions, very compact architecture, no installation, supports Modbus and OPC communication protocols, open architecture, supports C# scripts, can plugin extensions, and is a small and medium-sized system, especially suitable for the configuration and management combined system, this HMI provides customized development and source code services, 
